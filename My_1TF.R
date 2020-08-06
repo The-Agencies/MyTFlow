@@ -1,9 +1,11 @@
 library(tfestimators)
+library(tidyselect)
 library(tidyverse)
 library(titanic)
 
 #tf$feature_column$categorical_column_with_vocabulary_list
 #tf$feature_column$numeric_column
+
 
 cols <- feature_columns(
   tf$feature_column$categorical_column_with_vocabulary_list("Sex", vocabulary_list = list("male", "female")),
